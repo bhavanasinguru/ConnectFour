@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="rootGridPane" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="connect_four.Controller">
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints maxWidth="313.0" minWidth="184.0" prefWidth="184.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints />
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+      <Pane GridPane.columnSpan="2" />
+      <Pane fx:id="discPane" prefHeight="400.0" prefWidth="200.0" style="-fx-background-color: #00FFFF" GridPane.rowIndex="1" />
+      <VBox fx:id="myVBox" style="-fx-background-color: #0000FF;" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+         <children>
+            <TextField fx:id="playerOneTextField" promptText="Player One Name">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="15.0" right="15.0" top="35.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="playerTwoTextField" promptText="Player Two Name">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="15.0" right="15.0" />
+               </VBox.margin>
+            </TextField>
+            <Button fx:id="setNamesButton" alignment="CENTER" mnemonicParsing="false" prefHeight="31.0" prefWidth="190.0" text="Set Names">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <TextField fx:id="player" alignment="CENTER" editable="false" style="-fx-background-color: #0000FF;">
+               <VBox.margin>
+                  <Insets top="70.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField alignment="CENTER" editable="false" style="-fx-background-color: #0000FF;" text="Turn">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </TextField>
+            <Region layoutX="10.0" layoutY="10.0" prefHeight="130.0" prefWidth="184.0" style="-fx-background-color: #0000FF;" />
+         </children>
+      </VBox>
+    </children>
+</GridPane>
